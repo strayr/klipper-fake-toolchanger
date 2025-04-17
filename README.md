@@ -12,4 +12,11 @@ Allows gcode T commangs to trigger an M600
 * Set 6 (or adjust macro for more) extruders and single-extruder Multi Material in printer settings
 * set all the distances to zero in "Single Extruder MM setup"
 * Disable the wipe tower
-
+* toolchange gcode:
+   ```
+   T{next_extruder}
+   ```
+* add this to your start gcode to assume t0 is loaded and ready to go
+   ```
+   _FAKE_TOOLCHANGE TOOL=0 FAKE=1
+   ```
